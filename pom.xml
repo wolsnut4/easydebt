@@ -34,6 +34,12 @@
     <version.wildfly.swarm>2017.10.0</version.wildfly.swarm>
     <version.resteasy>3.0.19.Final</version.resteasy>
     <version.arquillian.cube>1.9.2</version.arquillian.cube>
+
+    <!--Hibernate-->
+    <version.hibernate>5.2.12.Final</version.hibernate>
+
+    <!--Jdbc drivers-->
+    <version.h2>1.4.187</version.h2>
   </properties>
 
   <dependencyManagement>
@@ -97,6 +103,41 @@
           <artifactId>undertow-core</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <!---->
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>datasources</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>bean-validation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${version.hibernate}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>keycloak</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>microprofile</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>${version.h2}</version>
     </dependency>
   </dependencies>
 
